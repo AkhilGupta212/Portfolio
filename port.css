@@ -1,0 +1,498 @@
+body {
+    width: 100%;
+    height: 100%;
+
+}
+
+body::-webkit-scrollbar {
+    background-color: rgb(41, 37, 37);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(255, 115, 0);
+    border-radius: 10px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#header {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+}
+
+.logo {
+    margin-right: auto;
+    /* Pushes the logo to the left */
+}
+
+.logo a {
+    color: rgb(255, 115, 0);
+    font-family: Macondo;
+    cursor: default;
+    text-decoration: none;
+    font-size: xx-large;
+}
+
+.compo {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 4%;
+}
+
+.compo a {
+    color: white;
+    font-family: Macondo;
+    cursor: default;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.compo a:hover {
+    color: rgb(255, 115, 0);
+}
+
+@media screen and (max-width: 800px) {
+    nav {
+        flex-direction: column;
+    }
+
+    .logo,
+    .compo {
+        margin-top: 10px;
+        margin-right: 0;
+    }
+
+    .compo {
+        display: none;
+    }
+
+    #header {
+        justify-content: center;
+    }
+
+
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(41, 37, 37);
+    display: flex;
+}
+
+.cont-1 {
+    width: 51vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.pic {
+    background-color: rgb(41, 37, 37);
+    height: 90vh;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.pic img {
+    border-radius: 10px 10px 50px 44px;
+    border-top: 6px solid rgb(255, 115, 0);
+    box-shadow: -4px 20px 60px 24px black;
+    width: 60%;
+    max-height: 100%;
+    position: relative;
+    right: 5%;
+}
+
+.Hi {
+    background-color: rgb(41, 37, 37);
+    color: white;
+    display: flex;
+    align-items: flex-end;
+
+}
+
+.Hi p {
+    margin: 10px;
+    font-size: 2rem;
+    font-family: "Nunito";
+    font-weight: bolder;
+}
+
+.name {
+    background-color: rgb(41, 37, 37);
+    font-family: Rubik, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 2rem;
+    font-size: clamp(large, 50%, xx-large);
+}
+
+
+.Bio {
+    background-color: rgb(41, 37, 37);
+    color: white;
+    font-family: rubik;
+    padding-right: 50px;
+    font-size: 1.5rem;
+    padding-right: 2%;
+
+}
+
+.icons {
+    height: 7vh;
+    width: 40vw;
+    background-color: rgb(41, 37, 37);
+    margin-top: 1em;
+    display: flex;
+    padding: 10px;
+}
+
+.icons a {
+    margin-top: 10px;
+    padding: 0 30px;
+}
+
+.icons :hover {
+    color: white;
+}
+
+@media (max-width : 1000px) {
+    .container {
+        display: block;
+        height: 900px;
+    }
+
+    .pic {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 30vh;
+    }
+
+    .pic img {
+        height: 80%;
+        width: auto;
+        right: 0;
+    }
+
+    .cont-1 {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .Bio p {
+        margin: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .icons {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.proj {
+    height: 100vh;
+    background-color: rgb(41, 37, 37);
+}
+
+.had {
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 0px;
+    font-family: Rubik;
+
+}
+
+@media (max-width: 1000px) {
+    .had {
+        height: 10vh;
+        display: flex;
+        align-items: center;
+    }
+}
+
+.had h1 {
+    margin: 5rem;
+    font-size: 3rem;
+
+}
+
+.had h1 :hover {
+    text-shadow: 2px 2px 10px rgb(255, 115, 0);
+    cursor: default;
+}
+
+.projects {
+    height: 50vh;
+    margin: 3vh 3vw 0 3vw;
+    border-radius: 10px 10px 0 0;
+    border: 5px solid white;
+    border-top: 10px solid rgb(255, 115, 0);
+    display: flex;
+    flex-wrap: wrap;
+    overflow: scroll;
+}
+
+/* only work in chrome and safari */
+.projects::-webkit-scrollbar {
+    background-color: transparent;
+}
+
+.projects::-webkit-scrollbar-thumb {
+    background: rgb(255, 115, 0);
+    border-radius: 20px;
+}
+
+.project-1,
+.project-2,
+.project-3 {
+    width: clamp(5vw, 75%, 17vw);
+    height: 10vw;
+    margin: 30px;
+    border-radius: 1vh;
+    display: flex;
+    align-items: center;
+    color: wheat;
+    font-size: xx-large;
+    padding: 1em;
+    font-size: 3vw;
+}
+
+.project-1 {
+    width: 20vw;
+    background: url(watchimg.avif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.project-2 {
+    width: 20vw;
+    background: url(fun.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.project-2 a {
+    text-decoration: none;
+    color: white;
+
+}
+
+.project-1 a {
+    text-decoration: none;
+    color: white;
+}
+
+.project-1:hover {
+    transform: scale(1.05);
+    transition: transform .2s ease-in;
+
+
+}
+
+.project-2:hover {
+    transform: scale(1.05);
+    transition: transform .2s ease-in;
+
+}
+
+.project-3:hover {
+    transform: scale(1.05);
+    transition: transform .2s ease-in;
+}
+
+.WandE {
+    height: 100%;
+    background-color: rgb(41, 37, 37);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5%;
+
+
+    @media (max-width: 600px) {
+        padding: 0 5%;
+    }
+}
+
+main.row {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 20px;
+    margin-top: 5vh;
+
+    @media (min-width: 1000px) {
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 20px;
+
+    }
+}
+
+.col header.title {
+    font-family: rubik;
+    cursor: pointer;
+    font-size: 2vw;
+    display: flex;
+    justify-content: center;
+    color: rgb(255, 115, 0);
+    padding: 0px 0px 20px 0px;
+
+    @media (max-width: 600px) {
+        font-size: 3vw;
+    }
+}
+
+.col .content {
+    padding: 0px 5% 0px 5%;
+    border-left: 0;
+    border-top: 2px solid white;
+
+    @media (min-width: 601px) {
+        border-left: 2px solid white;
+        border-top: 0;
+    }
+}
+
+.col .content .box {
+    position: relative;
+    padding: 20px;
+    cursor: pointer;
+    margin-bottom: 2rem;
+    border-radius: 1rem;
+    overflow: auto;
+}
+
+.box h4 {
+    display: flex;
+    justify-content: center;
+    color: rgb(255, 115, 0);
+}
+
+.box h3 {
+    display: flex;
+    justify-content: center;
+    font-family: gugi;
+    font-size: larger;
+}
+
+.box p {
+    /* font-family: Flamenco; */
+    font-size: large;
+    font-weight: bold;
+}
+
+@media (max-width: 900px) {
+    .col .content .box::before {
+        right: calc(100% - 16px);
+    }
+}
+
+.btn {
+    background-color: rgb(0, 0, 0);
+    height: 3vh;
+    border: 2px solid rgb(255, 115, 0);
+    border-radius: 10px;
+    margin: 4px;
+    padding: 2px;
+    color: wheat;
+    padding: 0 8px 0 8px;
+
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    transition: all 0.1s ease-in-out;
+    background-color: rgb(20, 24, 24);
+}
+
+.test {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(41, 37, 37);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cont1 {
+    height: 60vh;
+    width: 70vw;
+    background-color: rgb(26, 23, 23);
+    border-radius: 1rem;
+}
+
+.temt {
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    color: rgb(255, 115, 0);
+}
+
+.testmonials {
+    height: 50vh;
+    width: 100%;
+}
+
+.contact>h2 {
+    color: rgb(255, 115, 0);
+    display: block;
+}
+
+.cont {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(41, 37, 37);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
